@@ -25,7 +25,7 @@ Foreign key(emp_id) references employee(emp_id)
 );
 
 Create table item (
-item_id int not null,
+item_id int NOT NULL,
 itemname varchar(255) NOT NULL,
-item_qty int
+item_qty int NOT NULL
  );
