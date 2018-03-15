@@ -3,32 +3,49 @@
 create database seva_hrms;
 use seva_hrms;
 
-
-Create Table employee(
-emp_ID int auto_increment primary key,
-fname varchar(255) NOT NULL,
-lname varchar(255)NOT NULL,
-email varchar(255) NOT NULL,
-designation varchar(100) NOT NULL,
-project varchar(100) NOT NULL
+-- Creating employee table
+CREATE TABLE employee (
+    emp_id int NOT NULL,
+    fname varchar(100) NOT NULL,
+    lname varchar(100),
+    email varchar(100),
+    designation varchar(100),
+    project varchar(100),
+    PRIMARY KEY (emp_id)
 );
 
 
-Create table emp_leave(
-emp_id int not null,
-from_date date,
-to_date date,
-leave_type varchar(255),
-leave_status varchar(255),
-reporting_mgr varchar(255),
-Foreign key(emp_id) references employee(emp_id)
+-- creating employee leave record table
+CREATE TABLE emp_leave (
+    emp_leave_id int NOT NULL,
+    emp_id int,
+    from_date date,
+    to_date date,
+    leave_type varchar(100),
+    leave_status varchar(100),
+    PRIMARY KEY (emp_leave_id),
+	FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
 );
 
-Create table item (
-item_id int NOT NULL,
-itemname varchar(255) NOT NULL,
-item_qty int NOT NULL
+-- creating inventory table as item
+CREATE TABLE  item (
+	item_id int NOT NULL,
+	itemname varchar(255) NOT NULL,
+	item_qty int NOT NULL,
+	PRIMARY KEY (item_id)
  );
+
+ -- creating item ordered by employee and its status
+CREATE TABLE  emp_item (
+	emp_item_id int auto_increment,
+	emp_req_status varchar (255) NOT NULL,
+	item_id int NOT NULL,
+	emp_id int NOT NULL,
+	PRIMARY KEY (emp_item_id),
+	FOREIGN KEY (item_id) REFERENCES item(item_id),
+	FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+);
+
 
 CREATE TABLE questionAns (
 qid varchar(20) Primary,
