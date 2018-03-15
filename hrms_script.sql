@@ -23,3 +23,9 @@ leave_status varchar(255),
 reporting_mgr varchar(255),
 Foreign key(emp_id) references employee(emp_id)
 );
+
+Create table item (
+item_id int not null,
+itemname varchar(255) NOT NULL,
+item_qty int
+ );
