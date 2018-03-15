@@ -48,7 +48,7 @@ CREATE TABLE  emp_item (
 
 
 CREATE TABLE questionAns (
-qid varchar(20) Primary,
+qid int Primary,
 question text(4000),
 checkbox1 text(2000),
 checkbox2 text(2000),
