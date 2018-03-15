@@ -29,3 +29,20 @@ item_id int NOT NULL,
 itemname varchar(255) NOT NULL,
 item_qty int NOT NULL
  );
+
+CREATE TABLE questionAns (
+qid varchar(20) Primary,
+question text(4000),
+checkbox1 text(2000),
+checkbox2 text(2000),
+checkbox3 text(2000),
+checkbox4 text(2000)
+);
+
+CREATE table Result (
+emp_id int not null,
+Total_Mark int,
+Obtained_Mark int,
+Present_date date,
+FOREIGN key (emp_id) references employee(emp_id)
+);
