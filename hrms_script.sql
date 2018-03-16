@@ -53,7 +53,8 @@ question text(4000),
 checkbox1 text(2000),
 checkbox2 text(2000),
 checkbox3 text(2000),
-checkbox4 text(2000)
+checkbox4 text(2000),
+correct_ans text(2000)	
 );
 
 CREATE table Result (
