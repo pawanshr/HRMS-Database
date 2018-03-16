@@ -61,6 +61,6 @@ CREATE table Result (
 emp_id int not null,
 Total_Mark int,
 Obtained_Mark int,
-Present_date date,
+Submit_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN key (emp_id) references employee(emp_id)
 );
