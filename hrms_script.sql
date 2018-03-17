@@ -54,7 +54,8 @@ checkbox1 text(2000),
 checkbox2 text(2000),
 checkbox3 text(2000),
 checkbox4 text(2000),
-correct_ans text(2000)	
+correct_ans text(2000),	
+Category varchar(400)	
 );
 
 CREATE table Result (
@@ -64,3 +65,4 @@ Obtained_Mark int,
 Submit_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN key (emp_id) references employee(emp_id)
 );
+
