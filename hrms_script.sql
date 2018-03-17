@@ -66,3 +66,7 @@ Submit_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN key (emp_id) references employee(emp_id)
 );
 
+Create table Category(
+Cid int Primary key,
+Category_name varchar(400)
+);
