@@ -55,7 +55,7 @@ checkbox2 text(2000),
 checkbox3 text(2000),
 checkbox4 text(2000),
 correct_ans text(2000),	
-Category varchar(400)	
+Category_name varchar(400)	
 );
 
 CREATE table Result (
